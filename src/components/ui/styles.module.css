@@ -1,0 +1,43 @@
+.themeToggle {
+    visibility: hidden;
+}
+
+.themeToggle+label {
+    content: '';
+    display: inline-block;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.themeToggle:not(:checked)+label {
+    background-color: gold;
+}
+
+.themeToggle:checked+label {
+    background-color: transparent;
+    box-shadow: inset -18px -16px 1px -10px #fff;
+}
+
+/* project component element */
+.componentListElement {
+    width: 100%;
+    font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.componentListElement:hover {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.componentListElement.selected {
+    background: var(--bg-tertiary);
+    /* box-shadow: var(--dark-blue) 1.95px 1.95px 2.6px; */
+}

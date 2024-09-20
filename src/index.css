@@ -1,0 +1,195 @@
+:root {
+    /* Light Theme */
+    --blue: #0077cc;
+    /* Primary Blue */
+    --light-blue: #66b2ff;
+    /* Lighter Blue */
+    --dark-blue: #005fa3;
+    /* Darker Blue */
+    --green: #28a745;
+    /* Success Green */
+    --light-green: #7cd67d;
+    /* Light Green */
+    --dark-green: #1e7c34;
+    /* Dark Green */
+    --yellow: #ffcc00;
+    /* Warning Yellow */
+    --light-yellow: #ffe066;
+    /* Light Yellow */
+    --red: #ff4d4d;
+    /* Error Red */
+    --dark-red: #b30000;
+    /* Dark Red */
+    --gray: #e0e0e0;
+    /* Neutral Gray */
+    --dark-gray: #333333;
+    /* Dark Text Gray */
+    --white: #ffffff;
+    /* Pure White */
+
+    /* Background Colors */
+    --bg-primary: #f7f7f7;
+    /* Shifted white for primary background */
+    --bg-secondary: #f0f0f0;
+    /* Off-white for secondary background */
+    --bg-tertiary: #e8e8e8;
+    /* Light gray for tertiary background */
+
+    /* Text Colors with Contrast */
+    --text-primary: #212121;
+    /* Darker gray for primary text, optimized for contrast */
+    --text-secondary: #333333;
+    /* Slightly lighter dark gray for secondary text */
+    --text-tertiary: #0077cc;
+    /* Blue for tertiary text (links, captions) to match theme */
+}
+
+[data-theme="dark"] {
+    /* Dark Theme */
+    --blue: #0099ff;
+    /* Vivid Cyan-Blue */
+    --light-blue: #33ccff;
+    /* Lighter Blue */
+    --dark-blue: #006699;
+    /* Dark Blue */
+    --green: #52c41a;
+    /* Success Green */
+    --light-green: #85d46a;
+    /* Lighter Green */
+    --dark-green: #1b7a17;
+    /* Dark Green */
+    --yellow: #ffdb4d;
+    /* Soft Yellow */
+    --light-yellow: #ffec99;
+    /* Light Yellow */
+    --red: #ff6b6b;
+    /* Soft Red */
+    --dark-red: #a83232;
+    /* Dark Red */
+    --gray: #1f1f1f;
+    /* Dark Background */
+    --dark-gray: #f0f0f0;
+    /* Light Text Gray */
+    --white: #ffffff;
+    /* White */
+
+    /* Background Colors */
+    --bg-primary: #1a1a1c;
+    /* Very dark gray for primary background */
+    --bg-secondary: #232121;
+    /* Darker gray for secondary background */
+    --bg-tertiary: #444444;
+    /* Lighter dark gray for tertiary background */
+
+    /* Text Colors with Contrast */
+    --text-primary: #f0f0f0;
+    /* Light gray for primary text, optimized for readability */
+    --text-secondary: #e0e0e0;
+    /* Slightly darker gray for secondary text */
+    --text-tertiary: #33ccff;
+    /* Lighter blue for tertiary text to contrast against dark background */
+}
+
+
+/* custom Ease */
+:root {
+    --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+
+    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+    --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+    --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+    --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+html,
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+/* scrollbar styles  */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-gray);
+}
+
+.hide-scrollbar::-webkit-scrollbar,
+.hide-scrollbar ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb,
+.hide-scrollbar ::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar-track,
+.scroll-hidden ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.show-scrollbar::-webkit-scrollbar,
+.show-scrollbar ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb,
+.show-scrollbar ::-webkit-scrollbar-thumb {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+}
+
+.show-scrollbar::-webkit-scrollbar-track,
+.scroll-hidden ::-webkit-scrollbar-track {
+    background: var(--dark-gray);
+}
+
+/* end scrollbar styles */

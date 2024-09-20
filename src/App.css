@@ -1,0 +1,83 @@
+.app {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside {
+    width: min(20%, 256px);
+    background-color: var(--bg-secondary);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: space-between;
+
+    height: 100%;
+}
+
+.aside>div {
+    width: 100%;
+}
+
+.aside .topics {
+    text-align: center;
+
+    flex: 1;
+    overflow-y: auto;
+    height: 200vh;
+
+    color: var(--text-primary);
+}
+
+.aside .topics>:first-child {
+    border-bottom: 1px solid var(--bg-tertiary);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 16px;
+}
+
+.aside .actions {
+    flex-shrink: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px;
+    border-top: 1px solid var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.aside .actions h4 {
+    font-weight: normal;
+    line-height: 0px;
+
+}
+
+.main {
+    flex: 1;
+    height: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* button {
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+} */
